@@ -1,16 +1,25 @@
 SELECT *
-FROM Parks_and_Recreation.employee_demographics;
+FROM Parks_and_Recreation.employee_demographics
+;
 
+-- I can select specific colums
 SELECT first_name,
 last_name,
-birth_date,
 age,
-age * age
-FROM Parks_and_Recreation.employee_demographics;
-
+age + 10,
+( age + 2 ) * 2
+FROM Parks_and_Recreation.employee_demographics
+;
 
 SELECT DISTINCT gender
-FROM Parks_and_Recreation.employee_demographics;
+FROM Parks_and_Recreation.employee_demographics
+;
 
-SELECT DISTINCT first_name, gender
-From Parks_and_Recreation.employee_demographics;
+
+-- we can get specific colums with where claus with comparison and logical operators
+SELECT *
+FROM Parks_and_Recreation.employee_demographics
+WHERE (first_name = 'Leslie' AND age = 44)
+OR (age > 44)
+OR (gender != 'Male')
+;
